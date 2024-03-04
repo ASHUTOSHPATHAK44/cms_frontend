@@ -16,7 +16,7 @@ const AdminPanel = () => {
       try {
         const token = localStorage.getItem("token"); // Retrieve JWT token from localStorage
         const response = await axios.post(
-          `http://localhost:3000/api/claims/allClaims`,
+          `${process.env.REACT_APP_BACKEND_URL}api/claims/allClaims`,
           { userId: userId },
           {
             headers: {
